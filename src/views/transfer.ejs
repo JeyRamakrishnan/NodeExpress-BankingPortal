@@ -7,19 +7,19 @@
   <% } %>
   <span class="error"></span>
 
-  <form id="transferForm">
+  <form id="transferForm" action="/transfer" method="post">
     <span>Transfer From: </span> 
-    <select required>
+    <select required name="from" id="from">
       <option value="checking">Checking</option>
       <option value="savings">Savings</option>
     </select>
     <span> to: </span>
-    <select required>
+    <select required name="to" id="to">
       <option value="checking">Checking</option>
       <option value="savings">Savings</option>
     </select>
     <input type="number" name="amount" id="amount" required placeholder="amount" step="0.01">
-    <button type="submit">Transfer</button>
+    <input type="submit" value="Transfer"></input>
   </form>
 
   <br><a href="/">Back to Accounts Summary</a>
